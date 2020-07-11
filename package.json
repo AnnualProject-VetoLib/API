@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "It's a API for Vetolib app",
+  "repository": "vetolib github repo",
+  "license": "AFL-3.0",
+  "dependencies": {
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "body-parser": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "mongoose": "^5.9.23"
+  },
+  "scripts": {
+    "start": "node ./index.js"
+  }
+}
