@@ -25,12 +25,12 @@ app.get('/', (req, res) => { res.send('Server is open!') } );
 
 //** USER PATH **//
 
-app.get('/listUsers', User.getAll);
-/*app.get('/listUsers/:id', User.getOne);
-app.post('/addUser', User.addOne);
-app.post('/updateUser/:id', User.updateOne);
-app.delete('/deleteUser/:id', User.deleteOne);
-app.post('/login', User.login);*/
+app.get('/users', User.getAll);
+app.get('/user/:id', User.getById);
+app.post('/user/add', User.add);
+// app.put('/user/update/:id', User.update);
+app.delete('user/delete/:id', User.remove);
+// app.post('/login', User.login);
 
 //** SERVER LISTEN **//
 
