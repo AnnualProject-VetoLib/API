@@ -1,4 +1,5 @@
 const User = require('./lib/user');
+const Clinical = require('./lib/clinical');
 const { SERVER_PORT } = require('./lib/const');
 const bodyParser = require('body-parser');
 const Express = require('express');
@@ -21,7 +22,7 @@ app.set('view engine', 'ejs');
 
 //** DEFAULT PATH **//
 
-app.get('/', (req, res) => { res.send('Server is open!') } );
+app.get('/', (_req, res) => { res.send('Server is open!') } );
 
 //** USER PATH **//
 
@@ -31,6 +32,10 @@ app.post('/user/add', User.add);
 app.put('/user/update/:id', User.update);
 app.delete('/user/delete/:id', User.remove);
 // app.post('/login', User.login);
+
+//** CLINICAL PATH **//
+
+app.get('/clinicals', Clinical.getAll);
 
 //** SERVER LISTEN **//
 
