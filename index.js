@@ -28,7 +28,7 @@ app.get('/', (req, res) => { res.send('Server is open!') } );
 app.get('/users', User.getAll);
 app.get('/user/:id', User.getById);
 app.post('/user/add', User.add);
-// app.put('/user/update/:id', User.update);
+app.put('/user/update/:id', User.update);
 app.delete('/user/delete/:id', User.remove);
 // app.post('/login', User.login);
 
