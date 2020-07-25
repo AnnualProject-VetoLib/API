@@ -1,5 +1,6 @@
 const User = require('./lib/user');
 const Clinical = require('./lib/clinical');
+const HealthBook = require('./lib/health_book');
 const { SERVER_PORT } = require('./lib/const');
 const bodyParser = require('body-parser');
 const Express = require('express');
@@ -36,6 +37,14 @@ app.delete('/user/delete/:id', User.remove);
 //** CLINICAL PATH **//
 
 app.get('/clinicals', Clinical.getAll);
+
+//** HEALTH BOOK **//
+
+app.get('/health_books', HealthBook.getAll);
+app.get('/health_book/:id', HealthBook.getById);
+app.post('/health_book/add', HealthBook.add);
+app.put('/health_book/update/:id', HealthBook.update);
+app.delete('/health_book/delete/:id', HealthBook.remove);
 
 //** SERVER LISTEN **//
 
