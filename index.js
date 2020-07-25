@@ -28,11 +28,13 @@ app.get('/', (_req, res) => { res.send('Server is open!') } );
 //** USER PATH **//
 
 app.get('/users', User.getAll);
+app.get('/users/veto', User.getVeto);
+app.get('/users/customer', User.getCustomer);
 app.get('/user/:id', User.getById);
 app.post('/user/add', User.add);
 app.put('/user/update/:id', User.update);
 app.delete('/user/delete/:id', User.remove);
-// app.post('/login', User.login);
+app.post('/login', User.login);
 
 //** CLINICAL PATH **//
 

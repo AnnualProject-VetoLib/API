@@ -5,11 +5,12 @@
   "repository": "vetolib github repo",
   "license": "AFL-3.0",
   "dependencies": {
-    "morgan": "^1.10.0",
     "body-parser": "latest",
     "cors": "latest",
     "express": "latest",
-    "mongoose": "^5.9.23"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.23",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
