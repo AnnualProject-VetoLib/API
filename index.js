@@ -1,3 +1,5 @@
+require("./lib/db");
+
 const User = require("./lib/user");
 const Clinical = require("./lib/clinical");
 const HealthBook = require("./lib/health_book");
